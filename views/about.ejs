@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FLATICON ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <nav class="nav container">
+        <a href="/" class="nav__logo">
+          <img
+            class="nav__logo-img"
+            src="../images/logo.svg"
+            alt="website logo"
+          />
+        </a>
+        <div class="nav__menu" id="nav-menu">
+          <div class="nav__menu-top">
+            <a href="/" class="nav__menu-logo">
+              <img src="../images/logo.svg" alt="" />
+            </a>
+            <div class="nav__close" id="nav-close">
+              <i class="fi fi-rs-cross-small"></i>
+            </div>
+          </div>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href= "/" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="/login" class="nav__link">Login</a>
+            </li>
+            <li class="nav_item">
+              <a href="/about" class="nav__link  active-link">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main"></main>
+      <!--=============== HOME ===============-->
+      <section class="home section--lg">
+        <div class="home__container container grid">
+          <div class="home__content">
+            <p>Welcome to our website! We are dedicated to providing the best service possible.Our mission is to deliver high-quality products that bring value to our customers. Our Team We have a team of experienced professionals who are passionate about what they do.</p>
+          </div>
+          <img src="../images/home-img.png" class="home__img" alt="hats" />
+        </div>
+      </section>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 {
-  "name": "belajar-express",
+  "name": "tugas2-paw",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -13,8 +13,5 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.7"
   }
 }
