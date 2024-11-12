@@ -1,9 +1,7 @@
-// model fakultas
-// mengimpor modul mongoose untuk mengelola koneksi dengan mongodb
 const mongoose = require("mongoose");
 
 // definisakn schema untuk fakultas
-const fakultasSchema = new mongoose.Schema({
+const prodiSchema = new mongoose.Schema({
     // field untuk nama fakultas
     nama: {
         type: String,
@@ -16,6 +14,11 @@ const fakultasSchema = new mongoose.Schema({
         required: true,
         trim: true,
     },
+    fakultas_id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Fakultas",
+        required: true,
+    },
     // field untuk menyimpan tanggal pembuatan data fakultas
     createdAt: {
         type: Date,
@@ -24,7 +27,7 @@ const fakultasSchema = new mongoose.Schema({
 
 });
 
-// buat modul fakultas dari skema yang telah didefinisikan
-const Fakultas = mongoose.model("Fakultas", fakultasSchema);
+// buat modul prodi dari skema yang telah didefinisikan
+const Prodi = mongoose.model("Prodi", prodiSchema);
 
-module.exports = Fakultas;
+module.exports = Prodi;
