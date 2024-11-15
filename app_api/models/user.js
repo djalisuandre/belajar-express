@@ -5,7 +5,7 @@ const bcrypt = require("bcrypt");
 // Definisikan skema untuk fakultas
 const userSchema = new mongoose.Schema({
   // Field untuk nama fakultas
-  nama: {
+  name: {
     type: String,
     required: true,
   },
