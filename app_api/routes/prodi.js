@@ -3,10 +3,18 @@ const express = require("express");
 const router = express.Router();
 
 const prodiController = require("../controllers/prodiController");
+// import middleware auth and role
+const authMiddleware = require("../middleware/authMiddleware");
+const roleMiddleware = require("../middleware/roleMiddleware");
 
-router.get("/", prodiController.getAllProdi);
+router.get("/", authMiddleware, prodiController.getAllProdi);
 
-router.post("/", prodiController.createProdi);
+router.post(
+  "/",
+  authMiddleware,
+  roleMiddleware("admin"),
+  prodiController.createProdi
+);
 
 router.get("/:id", prodiController.getProdiById);
 

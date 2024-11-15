@@ -3,10 +3,18 @@ const express = require("express");
 const router = express.Router();
 
 const fakultasController = require("../controllers/fakultasController");
+// import middleware auth and role
+const authMiddleware = require("../middleware/authMiddleware");
+const roleMiddleware = require("../middleware/roleMiddleware");
 
-router.get("/", fakultasController.getAllFakultas);
+router.get("/", authMiddleware, fakultasController.getAllFakultas);
 
-router.post("/", fakultasController.createFakultas);
+router.post(
+  "/",
+  authMiddleware,
+  roleMiddleware("admin"),
+  fakultasController.createFakultas
+);
 
 router.get("/:id", fakultasController.getFakultasById);
 
