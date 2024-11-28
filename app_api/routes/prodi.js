@@ -9,12 +9,7 @@ const roleMiddleware = require("../middleware/roleMiddleware");
 
 router.get("/", authMiddleware, prodiController.getAllProdi);
 
-router.post(
-  "/",
-  authMiddleware,
-  roleMiddleware("admin"),
-  prodiController.createProdi
-);
+router.post("/", prodiController.createProdi);
 
 router.get("/:id", prodiController.getProdiById);
 

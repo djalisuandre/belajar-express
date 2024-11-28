@@ -1,18 +1,19 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 // import controller
-const mainController = require('../controllers/mainController');
+const mainController = require("../controllers/mainController");
 
 //route
-router.get('/', mainController.use);
+router.get("/", (req, res) => {
+  res.redirect("/home");
+});
 
-router.get('/home', mainController.index);
+router.get("/home", mainController.index);
 
-router.get('/about', mainController.about);
+router.get("/about", mainController.about);
 
-router.get('/contact', mainController.contact);
-
+router.get("/contact", mainController.contact);
 
 /* GET home page. */
 // router.get('/', function(req, res, next) {
@@ -25,7 +26,7 @@ router.get('/contact', mainController.contact);
 //         {
 //             judul: "berita 1",
 //             isi: "isi berita 1"
-            
+
 //         },
 //         {
 //             judul: "berita 2",
@@ -39,7 +40,6 @@ router.get('/contact', mainController.contact);
 //     // res.sendFile(__dirname + "/about.html");
 //     res.render('about',{title: 'halaman about', layout:'main'});
 // });
-
 
 // router.get("/contact", (req, res)=>{
 //     // res.sendFile(__dirname + "/contact.html");
@@ -57,7 +57,6 @@ router.get('/contact', mainController.contact);
 //     ];
 //     res.render('prodi',{title: 'halaman prodi',programstudi,layout:'main'});
 // });
-
 
 // router.use("/",(req, res)=>{
 //     res.send("<h1>404 not found</h1>");

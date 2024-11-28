@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 // definisakn schema untuk fakultas
 const fakultasSchema = new mongoose.Schema({
   // field untuk nama fakultas
-  name: {
+  nama: {
     type: String,
     required: true,
     trim: true,

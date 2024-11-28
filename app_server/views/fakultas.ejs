@@ -1,13 +1,23 @@
-<h1>Fakultas</h1>
-<table class="table table-striped">
-    <tr>
-        <th>Fakultas</th>
+<div class="container mt-4">
+  <h1 class="text-center">Daftar Fakultas</h1>
+  <table class="table table-striped mt-3">
+    <thead class="thead-dark">
+      <tr>
+        <th>Nama Fakultas</th>
         <th>Singkatan</th>
-    </tr>
-    <% fakultas.forEach(data => {%>
-    <tr>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (fakultas.length > 0) { %> <% fakultas.forEach(data => { %>
+      <tr>
         <td><%= data.nama %></td>
         <td><%= data.singkatan %></td>
-    </tr>
-    <% }) %>
-</table>
+      </tr>
+      <% }) %> <% } else { %>
+      <tr>
+        <td colspan="2" class="text-center">Tidak ada data fakultas</td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
